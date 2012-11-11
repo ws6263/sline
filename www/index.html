@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="utf-8">
+            
+            <!-- CORE JS FILES -->
+            <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/core/jQuery.js"></script>
+            
+            <!-- PLUGINS -->
+            <script type="text/javascript" charset="utf-8" src="js/plugins/LocalNotification.js"></script>
+            
+            <!-- OUR INIT -->
+            <script type="text/javascript" charset="utf-8" src="js/init.js"></script>
+            
+            <!-- STYLE STUFF -->
+            <link rel="stylesheet" href="css/style.css" />
+            
+            <!-- Netty -->
+            <script src="js/socket.io/socket.io.js"></script>
+            <script src="js/moment.min.js"></script>
+            <script src="js/jquery-1.7.2.min.js"></script>
+
+            
+            </head>
+    <body onload="app.bodyLoad()">
+        <div id="console" class="well">
+        </div>
+        
+        <form class="well form-inline" onsubmit="return false;">
+            <input id="msg" class="input" type="text" placeholder="Type something..."/>
+            <button type="button" onClick="sendMessage()" class="sendBtn">Send</button>
+            <!--<button type="button" onClick="sendDisconnect()" class="btn">Disconnect</button>-->
+        </form>
+        
+        <script type="text/javascript"> app.initialize(); </script>
+        
+        <!--<div id="header"></div>-->
+        <!--<div class="btn" onClick="notification.local_min();">localNotification + 60 seconds</div>-->
+        
+        <script src="js/netty.js"></script>
+    </body>
+</html>
